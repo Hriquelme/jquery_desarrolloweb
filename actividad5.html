@@ -46,15 +46,21 @@
                     return parseInt($(this).css('font-size')) + 1 + 'px';
                 });
             });
-        });
-
-          $(document).ready(function() {
-            $('#font_size_less').click(function() {
+          
+          $('#font_size_less').click(function() {
                 $('#texto').css("font-size", function() {
                     return parseInt($(this).css('font-size')) - 1 + 'px';
                 });
             });
+
+          $( ".form-control" ).change(function() {
+                var fuente = $( ".form-control").val();
+                $("#texto").attr('style','font-family:"'+fuente+'" !important');
+            });
+   
         });
+
+         
 
        </script>
 
@@ -71,9 +77,9 @@
       <p><strong>Font-Family</strong></p>
       <select name="font_family" id="font_family" class="form-control">
         <option>Seleccione tipografía</option>
-        <option>"Times New Roman", Times, serif</option>
-        <option>Arial, Helvetica, sans-serif</option>
-        <option>Impact, Charcoal, sans-serif </option>
+        <option value="Times new roman">"Times New Roman", Times, serif</option>
+        <option value="Arial">Arial, Helvetica, sans-serif</option>
+        <option value="Impact">Impact, Charcoal, sans-serif </option>
       </select>
       <br>
       <p><strong>Background-color</strong></p>
