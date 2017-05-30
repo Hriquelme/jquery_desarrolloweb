@@ -57,6 +57,11 @@
                 var fuente = $( ".form-control").val();
                 $("#texto").attr('style','font-family:"'+fuente+'" !important');
             });
+
+          $('#bgcolor').change(function(){
+               $("body").css("background",$('#bgcolor').val());
+             });
+
    
         });
 
